@@ -38,3 +38,6 @@ install: ./dev/travis-install-dependencies.sh
 
 script:
   mvn clean install -q -ff -Dsurefire.useFile=false -DLOG_LEVEL=WARN
+
+after_success:
+  coveralls
